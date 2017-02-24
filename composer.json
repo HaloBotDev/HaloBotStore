@@ -1,0 +1,26 @@
+{
+  "name": "HaloBotStore",
+  "description" : "Awesome Chat Bot for Online Store",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fitra Aditya",
+      "email": "halobotdev@gmail.com",
+      "homepage": "https://github.com/HaloBotDev",
+      "role": "Lead Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "slim/slim": "2.*",
+    "slim/views": "0.1.*",
+    "twig/twig": "*",
+    "twig/extensions": "*",
+    "illuminate/database": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "src/models"
+    ]
+  }
+}
