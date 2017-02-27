@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HaloBot Store | Admin</title>
+  <link rel="stylesheet" href="{{ baseUrl() }}/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="{{ baseUrl() }}/assets/css/bootstrap.progressbar.css">
+  <link rel="stylesheet" href="{{ baseUrl() }}/assets/css/bootstrap.daterangepicker.css">
+  <link rel="stylesheet" href="{{ baseUrl() }}/assets/css/font-awesome.css">
+  <link rel="stylesheet" href="{{ baseUrl() }}/assets/css/nprogress.css">
+  <link rel="stylesheet" href="{{ baseUrl() }}/assets/css/icheck.css">
+  <link rel="stylesheet" href="{{ baseUrl() }}/assets/css/jqvmap.css">
+  <link rel="stylesheet" href="{{ baseUrl() }}/assets/css/admin.css">
+  {% block style %}{% endblock %}
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><i class="fa fa-comments" aria-hidden="true"></i> HaloBot Store</a>
+          </div>
+          <div class="clearfix"></div>
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="{{ baseUrl() }}/assets/img/default.png" alt="{{ user['fullname'] }}" class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <h2>{{ user['fullname'] }}</h2>
+              <span>{{ user['email'] }}</span>
+            </div>
+          </div>
+          <br>
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-home" href="#"></i> Home</a></li>
+                <li><a><i class="fa fa-users"></i> Accounts <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="#">Line Bot</a></li>
+                    <li><a href="#">Admin</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="menu_section">
+              <h3>Support</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-book" href="#"></i> Help</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <img src="{{ baseUrl() }}/assets/img/default.png" alt="">{{ user['fullname'] }}
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li><a href="#"> Profile</a></li>
+                  <li><a href="{{ baseUrl() }}/admin/logout"><i class="fa fa-sign-out pull-right"></i> Log out</a></li>
+                </ul>
+              </li>
+              <li role="presentation" class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="badge bg-green">6</span>
+                </a>
+                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                  <li>
+                    <a>
+                      <span class="image"><img src="{{ baseUrl() }}/assets/img/default.png" alt="Profile Image" /></span>
+                      <span>
+                        <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="text-center">
+                      <a>
+                        <strong>See All Alerts</strong>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      {% block content %}{% endblock %}
+
+      <footer>
+        <div class="pull-right">
+          <i class="fa fa-comments" aria-hidden="true"></i> HaloBot Store<br>
+          <small class="text-muted">Template by <a href="https://colorlib.com">Colorlib</a></small>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+  </div>
+  <script src="{{ baseUrl() }}/assets/js/jquery.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.flot.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.flot.pie.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.flot.time.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.flot.stack.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.flot.resize.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.flot.spline.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.flot.orderbars.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.flot.curvedlines.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.vmap.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.vmap.world.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/jquery.vmap.sampledata.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/moment.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/bootstrap.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/bootstrap.progressbar.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/bootstrap.daterangepicker.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/fastclick.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/nprogress.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/chart.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/gauge.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/icheck.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/skycons.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/date.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/date.id-ID.js"></script>
+  <script src="{{ baseUrl() }}/assets/js/admin.js"></script>
+  {% block script %}{% endblock %}
+</body>
+
+</html>
